@@ -1,0 +1,4 @@
+F:\DBM\Final_Project\Boarding House Mangement\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+F:\DBM\Final_Project\Boarding House Mangement\ClassLibrary\obj\Debug\ClassLibrary.Properties.Resources.resources
+F:\DBM\Final_Project\Boarding House Mangement\ClassLibrary\obj\Debug\ClassLibrary.csproj.GenerateResource.cache
+F:\DBM\Final_Project\Boarding House Mangement\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache

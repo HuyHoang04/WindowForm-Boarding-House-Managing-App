@@ -1,0 +1,9 @@
+F:\DBM\Final_Project\Boarding House Mangement\Class\bin\Debug\Class.exe.config
+F:\DBM\Final_Project\Boarding House Mangement\Class\bin\Debug\Class.exe
+F:\DBM\Final_Project\Boarding House Mangement\Class\bin\Debug\Class.pdb
+F:\DBM\Final_Project\Boarding House Mangement\Class\obj\Debug\Class.csproj.AssemblyReference.cache
+F:\DBM\Final_Project\Boarding House Mangement\Class\obj\Debug\Class.Properties.Resources.resources
+F:\DBM\Final_Project\Boarding House Mangement\Class\obj\Debug\Class.csproj.GenerateResource.cache
+F:\DBM\Final_Project\Boarding House Mangement\Class\obj\Debug\Class.csproj.CoreCompileInputs.cache
+F:\DBM\Final_Project\Boarding House Mangement\Class\obj\Debug\Class.exe
+F:\DBM\Final_Project\Boarding House Mangement\Class\obj\Debug\Class.pdb

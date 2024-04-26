@@ -1,0 +1,20 @@
+F:\DBM\Final_Project\Boarding House Mangement\The App\obj\Debug\The App.csproj.AssemblyReference.cache
+F:\DBM\Final_Project\Boarding House Mangement\The App\obj\Debug\The_App.Properties.Resources.resources
+F:\DBM\Final_Project\Boarding House Mangement\The App\obj\Debug\The_App.UserLogin.resources
+F:\DBM\Final_Project\Boarding House Mangement\The App\obj\Debug\The App.csproj.GenerateResource.cache
+F:\DBM\Final_Project\Boarding House Mangement\The App\obj\Debug\The App.csproj.CoreCompileInputs.cache
+F:\DBM\Final_Project\Boarding House Mangement\The App\bin\Debug\The App.exe.config
+F:\DBM\Final_Project\Boarding House Mangement\The App\bin\Debug\The App.exe
+F:\DBM\Final_Project\Boarding House Mangement\The App\bin\Debug\The App.pdb
+F:\DBM\Final_Project\Boarding House Mangement\The App\bin\Debug\Class.exe
+F:\DBM\Final_Project\Boarding House Mangement\The App\bin\Debug\MaterialSkin.dll
+F:\DBM\Final_Project\Boarding House Mangement\The App\bin\Debug\Class.pdb
+F:\DBM\Final_Project\Boarding House Mangement\The App\bin\Debug\Class.exe.config
+F:\DBM\Final_Project\Boarding House Mangement\The App\obj\Debug\The App.csproj.Up2Date
+F:\DBM\Final_Project\Boarding House Mangement\The App\obj\Debug\The App.exe
+F:\DBM\Final_Project\Boarding House Mangement\The App\obj\Debug\The App.pdb
+F:\DBM\Final_Project\Boarding House Mangement\The App\obj\Debug\The_App.FormLogin.resources
+F:\DBM\Final_Project\Boarding House Mangement\The App\bin\Debug\Krypton.Toolkit.dll
+F:\DBM\Final_Project\Boarding House Mangement\The App\bin\Debug\Krypton.Toolkit.xml
+F:\DBM\Final_Project\Boarding House Mangement\The App\obj\Debug\The_App.FormMenuLL.resources
+F:\DBM\Final_Project\Boarding House Mangement\The App\obj\Debug\FinalProject.FSignUpTenant.resources
