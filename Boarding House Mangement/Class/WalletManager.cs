@@ -10,7 +10,6 @@ namespace Class
 {
     public class WalletLandlordManager
     {
-        private string connectionString = "Your_Connection_String";
 
         public void InsertWalletLandlord(string ID_w, decimal Balance)
         {

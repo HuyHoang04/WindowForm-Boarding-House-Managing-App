@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Class
 {
-    public class TenantManager
+    public static class TenantManager
     {
 
-        public void InsertTenant(string ID_t, string Name, string PhoneNumber, string Job, DateTime Birthday, decimal Balance)
+        public static void InsertTenant(string ID_t, string Name, string PhoneNumber, string Job, DateTime Birthday, decimal Balance)
         {
 
             SqlCommand command = new SqlCommand("InsertTenant", ConnectionManager.Current.getConnection);
@@ -37,7 +37,7 @@ namespace Class
 
         }
 
-        public void UpdateTenant(string ID_t, string Name, string PhoneNumber, string Job, DateTime Birthday, decimal Balance)
+        public static void UpdateTenant(string ID_t, string Name, string PhoneNumber, string Job, DateTime Birthday, decimal Balance)
         {
 
             SqlCommand command = new SqlCommand("UpdateTenant", ConnectionManager.Current.getConnection);
@@ -63,7 +63,7 @@ namespace Class
 
         }
 
-        public void DeleteTenant(string ID_t)
+        public static void DeleteTenant(string ID_t)
         {
 
             SqlCommand command = new SqlCommand("DeleteTenant", ConnectionManager.Current.getConnection);
@@ -84,19 +84,24 @@ namespace Class
 
         }
 
-        public DataTable FindTenantByID(string ID_t)
+        public static DataTable FindTenantByID(string ID_t)
         {
-
-            SqlCommand command = new SqlCommand("SELECT * FROM FindTenantByID(@ID_t)", ConnectionManager.Current.getConnection);
-            command.Parameters.AddWithValue("@ID_t", ID_t);
-
             DataTable table = new DataTable();
 
             try
             {
-                ConnectionManager.Current.openConnection();
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(table);
+                using (SqlConnection connection = ConnectionManager.Current.getConnection)
+                {
+                    using (SqlCommand command = new SqlCommand("FindTenantByID", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@ID_t", ID_t);
+
+                        connection.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        adapter.Fill(table);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -104,7 +109,6 @@ namespace Class
             }
 
             return table;
-
         }
     }
 }

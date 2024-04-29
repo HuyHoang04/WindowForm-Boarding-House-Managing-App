@@ -63,6 +63,8 @@
     <Compile Include="RentManager.cs" />
     <Compile Include="RoomManager.cs" />
     <Compile Include="TenantManager.cs" />
+    <Compile Include="UserLLManager.cs" />
+    <Compile Include="UserTNManager.cs" />
     <Compile Include="WalletManager.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

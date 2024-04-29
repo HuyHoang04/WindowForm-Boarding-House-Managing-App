@@ -198,13 +198,13 @@ namespace The_App
             bool temp = false;
             if (materialComboBox1.SelectedIndex == 1 )
                 temp = true;
-            RoomManager.InsertRoom(tb_RoomNumber_Room.Text.ToString(), 
-                Convert.ToInt32(tb_Area_Room.Text.ToString()), 
-                Convert.ToInt32(tb_Insterior_Room.Text.ToString()), 
+            RoomManager.InsertRoom(tb_RoomNumber_Room.Text, 
+                Convert.ToInt32(tb_Area_Room.Text), 
+                Convert.ToInt32(tb_Insterior_Room.Text), 
                 temp, 
-                Convert.ToDecimal(tb_ElectricityPrice_room.ToString()),
-                Convert.ToDecimal(tb_WaterPrice_Room.ToString()), 
-                ID_l_room.Text.ToString());
+                Convert.ToDecimal(tb_ElectricityPrice_room),
+                Convert.ToDecimal(tb_WaterPrice_Room.Text), 
+                ID_l_room.Text);
             Reload();
         }
 
@@ -213,7 +213,7 @@ namespace The_App
             bool temp = false;
             if (materialComboBox1.SelectedIndex == 1)
                 temp = true;
-            RoomManager.UpdateRoom(tb_RoomNumber_Room.Text, Convert.ToInt32(tb_Area_Room.Text.ToString()), Convert.ToInt32(tb_Insterior_Room.Text.ToString()), temp, Convert.ToDecimal(tb_ElectricityPrice_room.ToString()), Convert.ToDecimal(tb_WaterPrice_Room.ToString()), ID_l_room.Text);
+            RoomManager.UpdateRoom(tb_RoomNumber_Room.Text, Convert.ToInt32(tb_Area_Room.Text), Convert.ToInt32(tb_Insterior_Room.Text), temp, Convert.ToDecimal(tb_ElectricityPrice_room.Text), Convert.ToDecimal(tb_WaterPrice_Room.Text), ID_l_room.Text);
             Reload();
         }
 
@@ -224,7 +224,60 @@ namespace The_App
 
         private void materialButtonINs_Click(object sender, EventArgs e)
         {
+            TenantManager.InsertTenant(materialMaskedTextBoxID.Text, materialMaskedTextBoxName.Text, materialMaskedTextBoxPhone.Text, materialMaskedTextBoxJob.Text, kryptonDateTimePickerTenantBday.Value, Convert.ToDecimal(materialMaskedTextBoxBLc.Text));
+        }
 
+        private void materialButtonupdatetn_Click(object sender, EventArgs e)
+        {
+            TenantManager.UpdateTenant(materialMaskedTextBoxID.Text, materialMaskedTextBoxName.Text, materialMaskedTextBoxPhone.Text, materialMaskedTextBoxJob.Text, kryptonDateTimePickerTenantBday.Value, Convert.ToDecimal(materialMaskedTextBoxBLc.Text));
+
+        }
+
+        private void materialButtondeletetn_Click(object sender, EventArgs e)
+        {
+            TenantManager.DeleteTenant(materialMaskedTextBoxID.Text);
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void materialMaskedTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialMaskedTextBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButtonInsBill_Click(object sender, EventArgs e)
+        {
+            BillManagercs.InsertBill(materialMaskedTextBoxCodebILL.Text, float.Parse(materialMaskedTextBoxElectricNumber.Text), float.Parse(materialMaskedTextBoxWaterNumber.Text), kryptonDateTimePickerDay.Value, materialMaskedTextBoxID_lBill.Text, materialMaskedTextBoxRoomNumber.Text, materialMaskedTextBoxIDtenant.Text);
+        }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            BillManagercs.UpdateBill(materialMaskedTextBoxCodebILL.Text, float.Parse(materialMaskedTextBoxElectricNumber.Text), float.Parse(materialMaskedTextBoxWaterNumber.Text), kryptonDateTimePickerDay.Value);
+
+        }
+
+        private void materialButtonFindBill_Click(object sender, EventArgs e)
+        {
+            kryptonDataGridViewBill.DataSource = BillManagercs.FindBillByCode(materialMaskedTextBoxCodebILL.Text);
+        }
+
+        private void materialButtonFindTenant_Click(object sender, EventArgs e)
+        {
+            kryptonDataGridViewTenant.DataSource = TenantManager.FindTenantByID(materialMaskedTextBoxID.Text);
+        }
+
+        private void materialButtonFindLW_Click(object sender, EventArgs e)
+        {
+            kryptonDataGridViewLandlord.DataSource = LandlordManager.FindLandlordByID(materialMaskedTextBoxIDLW.Text);
         }
     }
 }

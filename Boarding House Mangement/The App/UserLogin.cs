@@ -33,12 +33,20 @@ namespace The_App
             if (materialRadioButtonTenant.Checked)
             {
                 FSignUpTenant formf = new FSignUpTenant();
+                string id = UserTNManager.GetUserId(username);
+                DataTable table = TenantManager.FindTenantByID(id);
+                formf.ID_Current.Text = "ID: " + table.Rows[0]["ID_t"].ToString();
+                formf.NameCurrent.Text = "Name: "+ table.Rows[0]["Name"].ToString();
                 formf.Show();
             }
             else
             {
                 ConnectionManager.Current = new ConnectionManager(username, password);
                 FormMenuLL form = new FormMenuLL();
+                string id = UserLLManager.GetUserId(username);
+                DataTable table = LandlordManager.FindLandlordByID(id);
+                form.ID_Current.Text = "ID: " + table.Rows[0]["ID_l"].ToString();
+                form.Name_Current.Text = "Name: " +table.Rows[0]["Name"].ToString();
                 form.Show();
             }
         }
